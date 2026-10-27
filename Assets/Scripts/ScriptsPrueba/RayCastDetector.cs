@@ -16,7 +16,10 @@ public class RayCastDetector : MonoBehaviour
         {
             Debug.Log("Ha chocado con"+ choque.collider.gameObject.name);
             Debug.DrawRay(transform.position, transform.forward * choque.distance, Color.green);
-            if (choque.rigidbody != null);
+            if (choque.rigidbody != null) ;
+            {
+                choque.rigidbody.AddForce(transform.forward * 1000);
+            }
         }
 
         else
